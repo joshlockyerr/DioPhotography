@@ -1,0 +1,19 @@
+@page
+@model SportModel
+@{
+    ViewData["Title"] = "Sport Photography";
+}
+
+<div class="container">
+    <h1 class="text-center mt-4">Sport Photography</h1>
+    <div class="row mt-4">
+        @foreach (var image in Model.Images)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="~/images/sport/@image" class="card-img-top" alt="Sport Photo">
+                </div>
+            </div>
+        }
+    </div>
+</div>
